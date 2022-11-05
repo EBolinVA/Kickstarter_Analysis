@@ -8,7 +8,7 @@ Louise, a US playwright, wants to start a crowdfunding campaign to fund her play
 ## Analysis and Challenges
 
 ### Analysis of Outcomes Based on Launch Date
-![Image of Theater Outcomes Based on Launch Date](
+![Image of Theater Outcomes Based on Launch Date](https://github.com/EBolinVA/kickstarter-analysis/blob/main/Theater_Outcomes_vs_Launch.png)
 
 ### Analysis of Outcomes Based on Goals
 
