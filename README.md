@@ -19,7 +19,8 @@ Next I looked at the data for only *plays* within the theater Kickstarter projec
 
 Since Louise has a proposed budget of $10,000 for her play, ***Fever***, let's look at the percentage of successful and failed projects by funding goal.
 
-![Image of Outcomes Based on Goals](
+![Image of Outcomes Based on Goals](https://github.com/EBolinVA/kickstarter-analysis/blob/main/Outcomes_vs_Goals.png)
+
 
 
 ### Challenges and Difficulties Encountered
