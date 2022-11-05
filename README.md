@@ -26,6 +26,8 @@ At first glance, we see that success rates vary depending on the range of fundin
 ### Challenges and Difficulties Encountered
 The first challenge for this project was in working with a very large dataset containing data for project categories that could not easily be filtered. As seen below, the original Kickstarter dataset contains only one column for category and subcategory information. 
 
+![Image of original column with too much data](
+
 The dataset included Kickstarter projects for everything from opening restaurants to producing television shows. In order to bring this dataset down to a more manageable subset, I created a new sheet with a pivot table Analysis conducted on almost 1400 theater funding projects include 1066 plays, but also 140 musicals and 187 spaces.   
 
 ## Results
