@@ -75,7 +75,15 @@ The explanation for converting Unix Timestamp to MM/DD/YYYY was found in section
    
    -Errors in the data: Because I used a formula to calculate average donations which used the Kickstarter column for amount Pledged and number of Backers, I got a #DIV/0 error because some campaigns had no backers. In order to debug this error, I used an IFERROR formula in excel to clean up the data in this column. 
    
-   -Limited sample size of data: The original Kickstarter dataset has over 4000 records of Kickstarter projects. By the time I filtered these down to the number of plays to those which were successful, failed or canceled, I was looking at 1046 records. If I were to pare this number down further to include only Kickstarter projects within the US, I would be looking at 671 records.
+   -Limited sample size of data: The original Kickstarter dataset has over 4000 records of Kickstarter projects. By the time I filtered these down to the number of plays to those which were successful, failed or canceled, I was looking at 1046 records. If I were to pare this number down further to include only Kickstarter projects for plays within the US, I would be looking at 671 records.
 
 4. What are some other possible tables and/or graphs that we could create?
-   -
+   -Box and Whisper Plot: Analysis using a box plot on US plays to compare the distribution of campaign goals and distribution of total amounts pledged. Outliers skewing the data might be found.
+   
+   -Average Donation by Length of Campaign
+   
+   -US Play Outcomes by Launch Date 
+   
+   -US Play Outcomes Based on Goals
+   
+   -A table to analyze success rate as a function of number of backers for crowdfunding play projects in the US
