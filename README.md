@@ -26,7 +26,13 @@ At first glance, we see that success rates vary depending on the range of fundin
 ### Challenges and Difficulties Encountered
 The first challenge for this project was in working with a very large dataset containing data for project categories that could not easily be filtered. As seen below, the original Kickstarter dataset contains only one column for category and subcategory information. 
 
-![Image of original column with too much data](
+![Image of original column with too much data](https://github.com/EBolinVA/kickstarter-analysis/blob/main/Category%20and%20Subcategory%20column.png)
+
+In order to parse out the information for theater projects that are plays (and not musicals, or spaces), it was necessary to create two new columns which would contain data for the Parent category and the Subcategory separately. In order to do this, I used the Text to Columns button in the Data menu, which allowed me to separate the Parent category and Subcategory into two columns based on the delimiter value "/". 
+
+
+
+
 
 The dataset included Kickstarter projects for everything from opening restaurants to producing television shows. In order to bring this dataset down to a more manageable subset, I created a new sheet with a pivot table Analysis conducted on almost 1400 theater funding projects include 1066 plays, but also 140 musicals and 187 spaces.   
 
