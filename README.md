@@ -53,15 +53,29 @@ I used a formula in Excel to convert the Unix timestamp to a day-month-year form
 
 I was able to confirm that this formula works by checking the original unix timestamps with this [Unix Timestamp converter tool](https://www.unixtimestamp.com/). Fun!   
 
+The explanation for converting Unix Timestamp to MM/DD/YYYY was found in section **1.3.3 Timing Success** of the Data Analytics Bootcamp modules[^1].
+
 ## Results
 
-- Two conclusions I can draw about the Outcomes based on Launch Date
-1. Every month, there are more successful theater campaigns than failed theater campaigns. This means that Louise is likely to encounter success no matter which month she chooses to launch her campaign for funding **Fever**.
-2. The month with the most successful campaigns vs failed campaigns is May. June and July also have higher than average successful Kickstarter campaigns for funding theater projects. Louise would be smart to launch her Kickstarter campaign during the summer months of May, June or July. Louise should not plan a Kickstarter launch for December
+1. Conclusions about the Outcomes based on Launch Date
 
-- What can you conclude about the Outcomes based on Goals?
-Louise indicated at the start of this project that she has a goal 
+   -Every month, there are more successful theater campaigns than failed theater campaigns. This means that Louise is likely to encounter success no matter which month she chooses to launch her campaign for funding **Fever**.
+   
+   -The month with the most successful campaigns vs failed campaigns is May. June and July also have higher than average successful Kickstarter campaigns for funding theater projects. Louise would be smart to launch her Kickstarter campaign during the summer months of May, June or July. Louise should not plan a Kickstarter launch for December as the least amount of successful projects were launched near the end-of-year holidays.
 
-- What are some limitations of this dataset?
+2. Conclusion about Outcomes based on Goals
 
-- What are some other possible tables and/or graphs that we could create?
+   -Louise indicated at the start of this project that she has a goal of $12,000 for her campaign to fund her play. It appears that she is only slightly more likely to have a successful campaign than not in this range of $10,000 to $14,999. 
+
+3. Limitations of this dataset
+
+   -Age of the data: The years represented by these Kickstarter projects are as old as 13 years (from 2009) and only as recent as 2017. We have no data from the past five years. Given the advent of the recent pandemic, we might find different outcomes based on goals, as the entertainment industry and global economy have changed during this time. 
+   
+   -Readability of the data: Some of the data needs to be converted, for example the Unix timestamp to date conversion explained above. Further, after creating the new date column, I pulled Year out and to populate a new column which only listed year.
+   
+   -Errors in the data: Because I used a formula to calculate average donations which used the Kickstarter column for amount Pledged and number of Backers, I got a #DIV/0 error because some campaigns had no backers. In order to debug this error, I used an IFERROR formula in excel to clean up the data in this column. 
+   
+   -Limited sample size of data: The original Kickstarter dataset has over 4000 records of Kickstarter projects. By the time I filtered these down to the number of plays to those which were successful, failed or canceled, I was looking at 1046 records. If I were to pare this number down further to include only Kickstarter projects within the US, I would be looking at 671 records.
+
+4. What are some other possible tables and/or graphs that we could create?
+   -
