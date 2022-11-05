@@ -10,7 +10,7 @@ Louise, a US playwright, wants to start a crowdfunding campaign to fund her play
 ### Analysis of Outcomes Based on Launch Date
 Starting with a dataset of over 4000 Kickstarter campaigns in a variety of industries around the world from 2009-2017, I filtered the data to view only theater Kickstarter campaigns within these years. The result is an analysis of 1393 theater crowdfunding projects.
 
-As we can see in the chart below, overall there are more *successful* theater funding campaingns than *failed* campaigns each month. The data indicates that success rates are highest in May and reach a low point in December, suggesting that people are less likely to pledge during the end of year holidays. 
+As we can see in the chart below, overall there are more *successful* theater funding campaigns than *failed* campaigns each month. The data indicates that success rates are highest in May and reach a low point in December, suggesting that people are less likely to pledge during the end of year holidays. 
 
 ![Image of Theater Outcomes Based on Launch Date](https://github.com/EBolinVA/kickstarter-analysis/blob/main/Theater_Outcomes_vs_Launch.png)
 
