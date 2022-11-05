@@ -30,7 +30,7 @@ The first challenge for this project was in working with a very large dataset co
 
 In order to parse out the information for theater projects that are plays (and not musicals, or spaces), it was necessary to create two new columns which would contain data for the Parent category and the Subcategory separately. In order to do this, I used the Text to Columns button in the Data menu, which allowed me to separate the Parent category and Subcategory into two columns based on the delimiter value "/". 
 
-
+![Image of selecting Text to Column tool]
 
 
 
