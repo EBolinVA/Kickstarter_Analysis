@@ -30,15 +30,34 @@ The first challenge for this project was in working with a very large dataset co
 
 In order to parse out the information for theater projects that are plays (and not musicals, or spaces), it was necessary to create two new columns which would contain data for the Parent category and the Subcategory separately. In order to do this, I used the Text to Columns button in the Data menu, which allowed me to separate the Parent category and Subcategory into two columns based on the delimiter value "/". 
 
-![Image of selecting Text to Column tool]
+![Image of selecting Text to Column tool](https://github.com/EBolinVA/kickstarter-analysis/blob/main/Create%20Subcategory.png)
 
+Another obstacle in presenting the data was that the original dataset contained total pledged toward the project and number of donors, but not individual donations. In order to provide Louise with information about average pledges, I cleaned up some of the data. Dividing total pledge amount by number of donors resulted in some errors. This is because not every project was able to collect donations. Some projects had 0 donors. In order to return a value that was not an error, I had to use an IFERROR formula: =IFERROR(ROUND(E2/L2,2),0). This formula tells us that if the result of dividing the total pledges by number of donors is an error, then return the value "0". An average donation of "0" is easier to read than #DIV/0! 
 
+Another complication found in the original data is that time was represented by Unix timestamp, which I learned is a numeric code representing the number of seconds elapsed since midnight January 1, 1970. In order to convert a timestamp that looks like this: 
 
-The dataset included Kickstarter projects for everything from opening restaurants to producing television shows. In order to bring this dataset down to a more manageable subset, I created a new sheet with a pivot table Analysis conducted on almost 1400 theater funding projects include 1066 plays, but also 140 musicals and 187 spaces.   
+> ![image](https://user-images.githubusercontent.com/116853681/200135814-1303fe6c-ed94-4158-96bd-0c78945666ef.png)
+
+to a date that looks like this:
+
+> ![image](https://user-images.githubusercontent.com/116853681/200135860-947eac07-b4c2-4122-be00-1cd326362082.png)
+
+I used a formula in Excel to convert the Unix timestamp to a day-month-year format. I created a new column "Date Created Conversion" and used the formula:
+```
+=(((J2/60)/60)/24)+DATE(1970,1,1)
+```
+- ```=``` tells Excel that we're using a formula.
+- ```(((J2/60)/60)/24)``` divides J2 (the first cell in the Launched_at column) by 60 (seconds), then divide that by 60 (minutes), then divide that by 24 (hours).
+- ```+DATE``` tells Excel we're using the DATE formula.
+- ```(1970,1,1)``` is the date that the Unix timestamps began counting from, also known as the **epoch**.
+
+I was able to confirm that this formula works by checking the original unix timestamps with this [Unix Timestamp converter tool](https://www.unixtimestamp.com/). Fun!   
 
 ## Results
 
-- What are two conclusions you can draw about the Outcomes based on Launch Date?
+- Two conclusions I can draw about the Outcomes based on Launch Date
+1. Every month, there are more successful theater campaigns than failed theater campaigns. This means that Louise is likely to encounter success no matter which month she chooses to launch her campaign for funding **Fever**.
+2. The month with the most successful campaigns vs failed campaigns is May. June and July also have higher than average successful Kickstarter campaigns for funding theater projects. Louise would be smart to launch her Kickstarter campaign during the summer months of May, June or July. Louise should not plan a Kickstarter launch for December
 
 - What can you conclude about the Outcomes based on Goals?
 Louise indicated at the start of this project that she has a goal 
