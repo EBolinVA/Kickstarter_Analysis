@@ -53,7 +53,7 @@ I used a formula in Excel to convert the Unix timestamp to a day-month-year form
 
 I was able to confirm that this formula works by checking the original unix timestamps with this [Unix Timestamp converter tool](https://www.unixtimestamp.com/). Fun!   
 
-The explanation for converting Unix Timestamp to MM/DD/YYYY was found in section **1.3.3 Timing Success** of the Data Analytics Bootcamp modules[^1].
+The explanation for converting Unix Timestamp to MM/DD/YYYY was found in section **1.3.3 Timing Success** of the Data Analytics Bootcamp modules [^1].
 
 ## Results
 
