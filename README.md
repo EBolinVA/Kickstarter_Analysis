@@ -49,11 +49,11 @@ I used a formula in Excel to convert the Unix timestamp to a day-month-year form
 - ```=``` tells Excel that we're using a formula.
 - ```(((J2/60)/60)/24)``` divides J2 (the first cell in the Launched_at column) by 60 (seconds), then divide that by 60 (minutes), then divide that by 24 (hours).
 - ```+DATE``` tells Excel we're using the DATE formula.
-- ```(1970,1,1)``` is the date that the Unix timestamps began counting from, also known as the **epoch**.
+- ```(1970,1,1)``` is the date that the Unix timestamps began counting from, also known as the **epoch**. [^1]
 
 I was able to confirm that this formula works by checking the original unix timestamps with this [Unix Timestamp converter tool](https://www.unixtimestamp.com/). Fun!   
 
-The explanation for converting Unix Timestamp to MM/DD/YYYY was found in section **1.3.3 Timing Success** of the Data Analytics Bootcamp modules [^1].
+[^1] The explanation for converting Unix Timestamp to MM/DD/YYYY was found in section **1.3.3 Timing Success** of the Data Analytics Bootcamp modules.
 
 ## Results
 
